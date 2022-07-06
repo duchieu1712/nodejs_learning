@@ -2,14 +2,15 @@ const {Sequelize} = require('sequelize')
 
 const sequelize = new Sequelize('db_order', 'root', '1234', {
     host: 'localhost',
+    port: '3306',
     dialect: 'mysql'
 });
 
 module.exports = sequelize;
 
-try {
-     sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
+// try {
+//      sequelize.authenticate();
+//     console.log('Connection has been established successfully.');
+//   } catch (error) {
+//     console.error('Unable to connect to the database:', error);
+//   }
